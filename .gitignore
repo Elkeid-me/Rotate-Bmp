@@ -1,3 +1,5 @@
 *.bmp
 *.exe
-test.bat
+*.bat
+/build
+/.xmake
