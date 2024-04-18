@@ -1,5 +1,4 @@
-*.bmp
-*.exe
-*.bat
 /build
 /.xmake
+/.cache
+compile_commands.json

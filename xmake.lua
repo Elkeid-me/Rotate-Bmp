@@ -1,5 +1,7 @@
+add_rules("plugin.compile_commands.autoupdate")
 target("Rotate BMP")
-    set_languages("cxx11")
+    set_languages("cxx20")
+    set_optimize("fastest")
+    set_warnings("all", "extra")
     set_kind("binary")
     add_files("src/*.cpp")
-

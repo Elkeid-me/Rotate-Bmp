@@ -52,7 +52,8 @@ private:
     {
         char *pix;
         uint32_t mWidth, mHeight, mPadding;
-        Matrix(const char *path, uint32_t offset, uint32_t imageSize, uint32_t width, uint32_t height, uint32_t padding);
+        Matrix(const char *path, uint32_t offset, uint32_t imageSize, uint32_t width,
+               uint32_t height, uint32_t padding);
         Matrix(uint32_t imageSize, uint32_t width, uint32_t height, uint32_t padding);
 
         char *operator()(uint32_t x, uint32_t y);

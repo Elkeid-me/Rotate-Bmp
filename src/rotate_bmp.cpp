@@ -3,6 +3,7 @@
 #include <cstring>
 #include <iomanip>
 #include <iostream>
+
 enum class PARAM_ERROR
 {
     TOO_MANY_PARAM,
@@ -26,9 +27,7 @@ int main(int argc, char *argv[])
         switch (error)
         {
         case PARAM_ERROR::TOO_FEW_PARAM:
-            std::cout << "\033[31m"
-                      << "Too few parameters."
-                      << "\033[0m" << std::endl;
+            std::cout << "\033[31m" << "Too few parameters." << "\033[0m" << std::endl;
             break;
         case PARAM_ERROR::TOO_MANY_PARAM:
             for (int i{3}; i < argc; i++)
@@ -61,7 +60,8 @@ int main(int argc, char *argv[])
 void paramErrMsg(const char *arg, const char *message)
 {
     std::cout << arg << std::endl;
-    std::cout << "\033[32m" << std::setiosflags(std::ios::left) << std::setfill('~') << std::setw(strlen(arg)) << "^" << std::endl;
+    std::cout << "\033[32m" << std::setiosflags(std::ios::left) << std::setfill('~')
+              << std::setw(strlen(arg)) << "^" << std::endl;
     std::cout << "|\n|\n";
     std::cout << "\033[31m" << message << "\033[0m" << std::endl;
 }
